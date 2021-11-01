@@ -1,7 +1,12 @@
-{{page-title "FastbootRehydrationSafestring"}}
+<h1>Fastboot / Glimmer rehydration SafeString</h1>
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<p>
+    This example shows how SafeString values don't get properly updated in the DOM during rehydration after Fastboot SSR.
+    It keeps the fastbooted value alive, and doesn't update when JavaScript takes over with a different value passed to the <code>htmlSafe()</code>.
+</p>
 
-{{outlet}}
+<p><code>this.value</code>: {{this.value}}</p>
+<p><code>htmlSafe(this.value)</code>: {{this.safeValue}}</p>
+<p><code>htmlSafe(this.value).string</code>: {{this.safeValue.string}}</p>
+
+<button {{on "click" this.generateNewValue}}>Generate new value</button>
