@@ -10,3 +10,17 @@
 <p><code>htmlSafe(this.value).string</code>: {{this.safeValue.string}}</p>
 
 <button {{on "click" this.generateNewValue}}>Generate new value</button>
+
+<style>
+    span {
+        font-family: Verdana;
+    }
+
+    span.fastboot-value {
+        color: grey;
+    }
+
+    span.clientside-value {
+        color: green;
+    }
+</style>

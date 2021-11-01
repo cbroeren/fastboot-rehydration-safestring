@@ -16,14 +16,14 @@ export default class ApplicationController extends Controller {
 
     @action
     generateNewValue() {
-        this.value = `<span>Random ${guidFor({})}</span>`;
+        this.value = `<span class="clientside-value">Random ${guidFor({})}</span>`;
     }
 
     constructor() {
         super(...arguments);
 
         if (this.fastboot.isFastBoot) {
-            this.value = "<span>Fastboot Initial Value</span>";
+            this.value = `<span class="fastboot-value">Fastboot Initial Value</span>`;
         } else {
             this.generateNewValue();
         }
