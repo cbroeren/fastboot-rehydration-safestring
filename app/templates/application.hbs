@@ -9,7 +9,10 @@
 <p><code>htmlSafe(this.value)</code>: {{this.safeValue}}</p>
 <p><code>htmlSafe(this.value).string</code>: {{this.safeValue.string}}</p>
 
-<button {{on "click" this.generateNewValue}}>Generate new value</button>
+<button type="button" {{on "click" this.generateNewValue}}>Generate new value</button>
+<LinkTo @route="list">Show List Example</LinkTo>
+
+{{outlet}}
 
 <style>
     span {

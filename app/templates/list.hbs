@@ -1,0 +1,10 @@
+<h1>Fastboot / Glimmer rehydration SafeString in list</h1>
+<LinkTo @route="application">Hide List Example</LinkTo>
+
+{{#each this.lists as |list|}}
+    <ul>
+        {{#each list as |item|}}
+            <li>{{item.id}}: {{item.value}} -- {{item.safeValue}}</li>
+        {{/each}}
+    </ul>
+{{/each}}
